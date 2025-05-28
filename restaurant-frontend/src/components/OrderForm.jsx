@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './OrderForm.css';
 import BackgroundSlider from './BackgroundSlider';
+import { API_URL } from '../config';
 
 function OrderForm() {
   const [menuItems, setMenuItems] = useState([]);
@@ -20,7 +21,7 @@ function OrderForm() {
   useEffect(() => {
     const fetchMenuItems = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/menu");
+        const res = await axios.get(`${API_URL}/api/menu`);
         setMenuItems(res.data);
       } catch (error) {
         console.error("Failed to load menu items:", error);
@@ -37,7 +38,7 @@ function OrderForm() {
   const total = itemDetails.price * quantity;
 
   try {
-    await axios.post("http://localhost:5000/api/orders", {
+    await axios.post(`${API_URL}/api/orders`, {
       itemId: selectedItem,
       quantity: parseInt(quantity),
       name,
@@ -251,7 +252,7 @@ function OrderForm() {
                 {orderSummary.image && (
                   <div className="order-summary-image-container">
                     <img
-                      src={`http://localhost:5000/uploads/${orderSummary.image}`}
+                      src={`${API_URL}/uploads/${orderSummary.image}`}
                       alt={orderSummary.itemName}
                       className="order-summary-image"
                     />

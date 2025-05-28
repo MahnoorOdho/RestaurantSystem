@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './MenuForm.css'; // Use the new CSS file
 import BackgroundSlider from './BackgroundSlider';
+import { API_URL } from '../config';
 
 function MenuForm() {
   const [menuItems, setMenuItems] = useState([]);
@@ -10,7 +11,7 @@ function MenuForm() {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/menu");
+        const response = await fetch(`${API_URL}/api/menu`);
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         setMenuItems(data);
@@ -40,7 +41,7 @@ function MenuForm() {
               <div className="menu-img-container">
                 {item.image ? (
                   <img
-                    src={`http://localhost:5000/uploads/${item.image}`}
+                    src={`${API_URL}/uploads/${item.image}`}
                     alt={item.name}
                     className="menu-img-fix"
                     onError={(e) => {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./ReservationForm.css";
 import BackgroundSlider from './BackgroundSlider';
+import { API_URL } from '../config';
  // Custom CSS file
 
 function ReservationForm() {
@@ -14,7 +15,7 @@ function ReservationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/reservation", {
+      await axios.post(`${API_URL}/api/reservation`, {
         name,
         email,
         date,
