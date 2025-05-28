@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { API_URL } from './config';
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -9,12 +10,11 @@ import ReservationForm from "./components/ReservationForm";
 import ContactForm from "./components/ContactForm";
 import AdminDashboard from "./components/AdminDashboard";
 
-
 function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/menu")
+    fetch(`${API_URL}/api/menu`)
       .then((res) => res.json())
       .then((data) => {
         console.log("", data);

@@ -6,8 +6,33 @@ const cors = require('cors');
 
 const app = express();
 
+// Configure CORS with specific options
+const allowedOrigins = [
+  'http://localhost:5173',          // Local development
+  'http://localhost:3000',          // Local production build
+  'http://localhost:5000',          // Local API Gateway
+  'https://restaurantsystemfrontend.onrender.com', // Deployed frontend
+  'https://restaurantsystemapigateway.onrender.com' // Deployed API Gateway
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
+  credentials: true,
+  maxAge: 86400 // 24 hours
+}));
+
 // Middlewares
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static('uploads'));
