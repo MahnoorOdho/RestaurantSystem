@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./ContactForm.css";
 import BackgroundSlider from './BackgroundSlider';
+import { API_URL } from '../config';
 
 
 function ContactForm() {
@@ -21,7 +22,7 @@ function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/contact", formData);
+      await axios.post(`${API_URL}/api/contact`, formData);
       alert("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {

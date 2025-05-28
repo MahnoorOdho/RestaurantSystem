@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API_URL } from '../config';
 
 function MenuPage() {
   const [menu, setMenu] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/menu").then((res) => setMenu(res.data));
+    axios.get(`${API_URL}/api/menu`).then((res) => setMenu(res.data));
   }, []);
 
   return (

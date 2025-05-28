@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminDashboard.css";
 import BackgroundSlider from './BackgroundSlider';
+import { API_URL } from '../config';
 
 const AdminDashboard = () => {
   const [menuItems, setMenuItems] = useState([]);
@@ -17,14 +18,12 @@ const AdminDashboard = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const fileInputRef = React.useRef(null);
 
-  const baseURL = "http://localhost:5000";
-
   const fetchData = async () => {
     try {
       const [menuRes, ordersRes, resvRes] = await Promise.all([
-        axios.get(`${baseURL}/api/menu`),
-        axios.get(`${baseURL}/api/orders`),
-        axios.get(`${baseURL}/api/reservation`),
+        axios.get(`${API_URL}/api/menu`),
+        axios.get(`${API_URL}/api/orders`),
+        axios.get(`${API_URL}/api/reservation`),
       ]);
       setMenuItems(menuRes.data);
       setOrders(ordersRes.data);
@@ -39,17 +38,17 @@ const AdminDashboard = () => {
   }, []);
 
   const deleteMenuItem = async (id) => {
-    await axios.delete(`${baseURL}/api/menu/${id}`);
+    await axios.delete(`${API_URL}/api/menu/${id}`);
     fetchData();
   };
 
   const deleteReservation = async (id) => {
-    await axios.delete(`${baseURL}/api/reservation/${id}`);
+    await axios.delete(`${API_URL}/api/reservation/${id}`);
     fetchData();
   };
 
   const deleteOrder = async (id) => {
-    await axios.delete(`${baseURL}/api/orders/${id}`);
+    await axios.delete(`${API_URL}/api/orders/${id}`);
     fetchData();
   };
 
@@ -63,7 +62,7 @@ const AdminDashboard = () => {
   };
 
   const saveEdit = async () => {
-    await axios.put(`${baseURL}/api/menu/${editingMenuItem}`, updatedItem);
+    await axios.put(`${API_URL}/api/menu/${editingMenuItem}`, updatedItem);
     setEditingMenuItem(null);
     fetchData();
   };
@@ -82,7 +81,7 @@ const AdminDashboard = () => {
     formData.append('image', selectedImage);
 
     try {
-      await axios.post(`${baseURL}/api/menu`, formData, {
+      await axios.post(`${API_URL}/api/menu`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -195,7 +194,7 @@ const AdminDashboard = () => {
             ) : (
               <>
                 <img 
-                  src={`${baseURL}/uploads/${item.image}`} 
+                  src={`${API_URL}/uploads/${item.image}`} 
                   alt={item.name} 
                   className="menu-image" 
                 />
