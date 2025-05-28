@@ -1,0 +1,23 @@
+# Node.js build artifacts
+node_modules
+dist
+build
+.cache
+.tmp
+
+# Environment and logs
+*.log
+.env*
+!.env.example  # Optional: keep a safe sample env file
+
+# Git and Docker
+.git
+.gitignore
+Dockerfile
+Dockerfile.*
+docker-compose.yml
+
+# Editor/IDE settings
+.vscode
+.idea
+*.swp
