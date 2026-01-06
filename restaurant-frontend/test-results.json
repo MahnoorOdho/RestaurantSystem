@@ -1,0 +1,779 @@
+{
+  "config": {
+    "configFile": "/home/muzammilodho/Projects/RestaurantSystem/restaurant-frontend/playwright.config.ts",
+    "rootDir": "/home/muzammilodho/Projects/RestaurantSystem/restaurant-frontend/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/muzammilodho/Projects/RestaurantSystem/restaurant-frontend/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/muzammilodho/Projects/RestaurantSystem/restaurant-frontend/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "contact.spec.ts",
+      "file": "contact.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Contact Service Tests",
+          "file": "contact.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-CONTACT-001: Submit contact form successfully - Priority: Critical",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c37ec27874a4649dbe8b-53d0e5e7440e9af9501f",
+              "file": "contact.spec.ts",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "TC-CONTACT-002: Validate required field errors - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c37ec27874a4649dbe8b-d6bf9bb386e1da281dc1",
+              "file": "contact.spec.ts",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "TC-CONTACT-003: Validate email format - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c37ec27874a4649dbe8b-170d883c4000c7aeb508",
+              "file": "contact.spec.ts",
+              "line": 103,
+              "column": 3
+            },
+            {
+              "title": "TC-CONTACT-004: Test message length variations - Priority: Medium",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c37ec27874a4649dbe8b-c0f4bfc87948a1f78987",
+              "file": "contact.spec.ts",
+              "line": 154,
+              "column": 3
+            },
+            {
+              "title": "TC-CONTACT-005: Handle special characters in message - Priority: Low",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c37ec27874a4649dbe8b-af8badb4cc614bd8c5af",
+              "file": "contact.spec.ts",
+              "line": 196,
+              "column": 3
+            },
+            {
+              "title": "TC-CONTACT-006: Submit multiple messages consecutively - Priority: Low",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c37ec27874a4649dbe8b-2c309e85a2e5ed2b5a21",
+              "file": "contact.spec.ts",
+              "line": 215,
+              "column": 3
+            },
+            {
+              "title": "TC-CONTACT-007: Test potential XSS input handling - Priority: Low",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c37ec27874a4649dbe8b-30c9b3f279740108234c",
+              "file": "contact.spec.ts",
+              "line": 246,
+              "column": 3
+            },
+            {
+              "title": "TC-CONTACT-008: Verify form data not persisted after refresh - Priority: Low",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c37ec27874a4649dbe8b-3ce399203668ee3e0880",
+              "file": "contact.spec.ts",
+              "line": 282,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e.spec.ts",
+      "file": "e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "End-to-End Tests",
+          "file": "e2e.spec.ts",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-E2E-001: Complete order flow - Browse to Checkout - Priority: Critical",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1c7859d981cc20c96be-79807d3091baf5fb37a0",
+              "file": "e2e.spec.ts",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-002: Complete reservation flow - Priority: Critical",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1c7859d981cc20c96be-99c51abdb16ce7baa96f",
+              "file": "e2e.spec.ts",
+              "line": 126,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-003: Browse menu and contact restaurant - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1c7859d981cc20c96be-e9f7d00fcde8119e615e",
+              "file": "e2e.spec.ts",
+              "line": 195,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-004: Navigate through all main pages - Priority: Medium",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1c7859d981cc20c96be-68c78e0f748190e086a5",
+              "file": "e2e.spec.ts",
+              "line": 239,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-005: Order with modifications - Priority: Medium",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1c7859d981cc20c96be-d012ebce1860e2ebc9b4",
+              "file": "e2e.spec.ts",
+              "line": 282,
+              "column": 3
+            },
+            {
+              "title": "TC-E2E-006: Make multiple reservations - Priority: Low",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b1c7859d981cc20c96be-55702a2d2522ef85ce51",
+              "file": "e2e.spec.ts",
+              "line": 335,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "menu.spec.ts",
+      "file": "menu.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Menu Service Tests",
+          "file": "menu.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-MENU-001: View all menu items - Priority: Critical",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "73ebff718611fd089a03-ea12c043f72b9a52f47b",
+              "file": "menu.spec.ts",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "TC-MENU-002: Search menu items by name - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "73ebff718611fd089a03-62f149d949d2734863dc",
+              "file": "menu.spec.ts",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "TC-MENU-003: Filter menu by category - Priority: Medium",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "73ebff718611fd089a03-4090fde1323196710039",
+              "file": "menu.spec.ts",
+              "line": 76,
+              "column": 3
+            },
+            {
+              "title": "TC-MENU-004: View menu item details - Priority: Medium",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "73ebff718611fd089a03-a2c2fcf8daa7b015ce4c",
+              "file": "menu.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "TC-MENU-005: Verify menu item prices are valid - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "73ebff718611fd089a03-7ec3207e0553e13dd20f",
+              "file": "menu.spec.ts",
+              "line": 136,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "order.spec.ts",
+      "file": "order.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Order Service Tests",
+          "file": "order.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-ORDER-001: Place complete order with valid data - Priority: Critical",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "85d1357294a106dff78a-24e1b25020ed14eaefc3",
+              "file": "order.spec.ts",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "TC-ORDER-002: Update item quantity in cart - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "85d1357294a106dff78a-c16aada15a99ea156e77",
+              "file": "order.spec.ts",
+              "line": 72,
+              "column": 3
+            },
+            {
+              "title": "TC-ORDER-003: Edit order before checkout - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "85d1357294a106dff78a-50e00814208d8c7fa27f",
+              "file": "order.spec.ts",
+              "line": 103,
+              "column": 3
+            },
+            {
+              "title": "TC-ORDER-004: Cancel order - Priority: Medium",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "85d1357294a106dff78a-dffd62d1913b5c889fd4",
+              "file": "order.spec.ts",
+              "line": 143,
+              "column": 3
+            },
+            {
+              "title": "TC-ORDER-005: Validate required fields - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "85d1357294a106dff78a-f7b9643f58c22eb5cbf1",
+              "file": "order.spec.ts",
+              "line": 178,
+              "column": 3
+            },
+            {
+              "title": "TC-ORDER-006: Complete checkout flow - Priority: Critical",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "85d1357294a106dff78a-ca6d04f474af7932ff0f",
+              "file": "order.spec.ts",
+              "line": 201,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "reservation.spec.ts",
+      "file": "reservation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Reservation Service Tests",
+          "file": "reservation.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-RESERVATION-001: Create reservation with valid data - Priority: Critical",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3612482aaacd88f2e168-609e29f01dbf2e669de7",
+              "file": "reservation.spec.ts",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "TC-RESERVATION-002: Validate past date rejection - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3612482aaacd88f2e168-447983c30cef4aded22e",
+              "file": "reservation.spec.ts",
+              "line": 61,
+              "column": 3
+            },
+            {
+              "title": "TC-RESERVATION-003: Check guest count limits - Priority: Medium",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3612482aaacd88f2e168-292cdc8f0c88be644476",
+              "file": "reservation.spec.ts",
+              "line": 96,
+              "column": 3
+            },
+            {
+              "title": "TC-RESERVATION-004: Validate required fields - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3612482aaacd88f2e168-6110f02f10b2fbe618cd",
+              "file": "reservation.spec.ts",
+              "line": 150,
+              "column": 3
+            },
+            {
+              "title": "TC-RESERVATION-005: Test different time slots - Priority: Medium",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3612482aaacd88f2e168-6a21c291f264019dfe34",
+              "file": "reservation.spec.ts",
+              "line": 182,
+              "column": 3
+            },
+            {
+              "title": "TC-RESERVATION-006: Test email format validation - Priority: High",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3612482aaacd88f2e168-9744e07f30db69d2a505",
+              "file": "reservation.spec.ts",
+              "line": 213,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-01-06T12:23:32.375Z",
+    "duration": 660.2169999999999,
+    "expected": 0,
+    "skipped": 31,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
