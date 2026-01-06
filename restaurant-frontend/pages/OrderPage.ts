@@ -22,18 +22,18 @@ export class OrderPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.pageHeader = page.locator('.order-form-header h2, h2:has-text("Place Your Order")');
-    this.nameInput = page.locator('input[type="text"]').first();
-    this.emailInput = page.locator('input[type="email"]');
-    this.addressInput = page.locator('input[type="text"]').nth(1);
-    this.phoneInput = page.locator('input[type="tel"], input[type="text"]').nth(2);
-    this.menuItemSelect = page.locator('select');
-    this.quantityInput = page.locator('input[type="number"]');
-    this.submitButton = page.locator('button[type="submit"]');
-    this.orderSummary = page.locator('.order-summary, .summary-card');
-    this.editButton = page.locator('button:has-text("Edit")');
-    this.checkoutButton = page.locator('button:has-text("Checkout"), button:has-text("Confirm")');
-    this.cancelButton = page.locator('button:has-text("Cancel")');
+    this.pageHeader = page.locator('.order-form-header h2');
+    this.nameInput = page.locator('.form-group input[type="text"]').first();
+    this.emailInput = page.locator('.form-group input[type="email"]');
+    this.addressInput = page.locator('.form-group input[type="text"]').nth(1);
+    this.phoneInput = page.locator('.form-group input[type="tel"]');
+    this.menuItemSelect = page.locator('.form-group select');
+    this.quantityInput = page.locator('.form-group input[type="number"]');
+    this.submitButton = page.locator('button.submit-btn, button[type="submit"]');
+    this.orderSummary = page.locator('.order-summary');
+    this.editButton = page.locator('button.edit-btn');
+    this.checkoutButton = page.locator('button.checkout-btn');
+    this.cancelButton = page.locator('button.cancel-btn');
     this.thankYouMessage = page.locator('.thank-you-message');
   }
 
